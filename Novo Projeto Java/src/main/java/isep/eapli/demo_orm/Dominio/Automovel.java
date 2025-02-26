@@ -9,8 +9,11 @@ public class Automovel {
     private int anoDeAquisicao;
     private String cor;
     private String cilindrada;
+    private float kms;
     private GrupoAutomovel grupoAutomovel;
 
-
+    public void alterarKms(float kms){
+        this.kms=kms;
+    }
 
 }
