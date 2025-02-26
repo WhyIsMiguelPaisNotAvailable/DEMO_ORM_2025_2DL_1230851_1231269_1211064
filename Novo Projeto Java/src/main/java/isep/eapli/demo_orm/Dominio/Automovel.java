@@ -12,8 +12,15 @@ public class Automovel {
     private float kms;
     private GrupoAutomovel grupoAutomovel;
 
+    public String matricula(String matricula){
+        return matricula;
+    }
     public void alterarKms(float kms){
         this.kms=kms;
     }
 
+    @Override
+    public String toString() {
+        return String.format("matricula:" + matricula + "ano de fabrico:" + anoDeFabrico + "Ano de Aquisição: " + anoDeAquisicao + "cor: " + cor + "cilindrada: " + cilindrada + "Kms: " + kms + "grupo automóvel: " + grupoAutomovel);
+    }
 }
