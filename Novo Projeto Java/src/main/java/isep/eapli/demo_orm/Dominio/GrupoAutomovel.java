@@ -11,5 +11,8 @@ public class GrupoAutomovel {
         this.portas = portas;
     }
 
+    public void alterarClasse(String classe){
+        this.classe=classe;
+    }
 
 }
