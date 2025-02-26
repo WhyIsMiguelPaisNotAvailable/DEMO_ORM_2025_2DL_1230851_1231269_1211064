@@ -1,4 +1,4 @@
-package isep.eapli.demo_orm.Dominio;
+package javaTest;
 
 public class GrupoAutomovelTest {
 }
