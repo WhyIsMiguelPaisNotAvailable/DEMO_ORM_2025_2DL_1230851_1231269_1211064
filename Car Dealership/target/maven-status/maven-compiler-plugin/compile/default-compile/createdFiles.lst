@@ -1,0 +1,8 @@
+isep\eapli\demo_orm\util\DateTime.class
+isep\eapli\demo_orm\apresentacao\MainMenu.class
+isep\eapli\demo_orm\util\Console.class
+isep\eapli\demo_orm\util\Matricula.class
+isep\eapli\demo_orm\util\JPAUtil.class
+isep\eapli\demo_orm\DemoORM.class
+isep\eapli\demo_orm\dominio\Automovel.class
+isep\eapli\demo_orm\dominio\GrupoAutomovel.class

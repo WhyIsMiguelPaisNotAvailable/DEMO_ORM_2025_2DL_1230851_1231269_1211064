@@ -1,18 +1,29 @@
 package isep.eapli.demo_orm.dominio;
 
-import java.util.Date;
+import isep.eapli.demo_orm.util.Matricula;
+import jakarta.persistence.*;
 
+import java.util.Date;
+@Entity
 public class Automovel {
 
-    private String matricula;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Embedded
+    private Matricula matricula;
     private int anoDeFabrico;
     private int anoDeAquisicao;
     private String cor;
     private String cilindrada;
     private float kms;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "GrupoAutomovel")
     private GrupoAutomovel grupoAutomovel;
 
-    public Automovel(String matricula, int anoDeFabrico, int anoDeAquisicao, String cor, String cilindrada, float kms, GrupoAutomovel grupoAutomovel){
+    protected Automovel(){}
+
+    public Automovel(Matricula matricula, int anoDeFabrico, int anoDeAquisicao, String cor, String cilindrada, float kms, GrupoAutomovel grupoAutomovel){
         this.matricula=matricula;
         this.anoDeFabrico=anoDeFabrico;
         this.anoDeAquisicao=anoDeAquisicao;
@@ -20,6 +31,10 @@ public class Automovel {
         this.cilindrada=cilindrada;
         this.kms=kms;
         this.grupoAutomovel=grupoAutomovel;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String matricula(String matricula){
